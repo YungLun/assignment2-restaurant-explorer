@@ -1,0 +1,305 @@
+{
+  "info": {
+    "_postman_id": "7deb993c-e488-4981-bbcd-7d015e123b84",
+    "name": "ITE5315 Assignment 2 - Restaurant Explorer - Yung-Lun Lee",
+    "description": "01 Home Route: Tests the home page route.\n\n02 Get All Data: Retrieves all restaurant records from the dataset.\n\n03 Get One Valid Record: Tests req.params.id by retrieving a valid restaurant record.\n\n04 Get Invalid Record: Tests error handling when a restaurant ID does not exist.\n\n05 Search by Keyword: Tests req.query.keyword by searching restaurants by name.\n\n06 Filter by Category: Tests req.query.category by filtering restaurants by cuisine.\n\n07 Table View: Displays restaurant data using an EJS rendered table.\n\n08 Add Form Page: Displays the form used to add a new restaurant.\n\n09 Add New Restaurant - Valid POST: Tests form submission using valid restaurant data.\n\n10 Add New Restaurant - Invalid POST: Tests validation middleware using invalid form data.\n\n11 Wrong Route: Tests custom 404 error handling.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55920241",
+    "_collection_link": "https://go.postman.co/collection/55920241-7deb993c-e488-4981-bbcd-7d015e123b84?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 Home Route",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5500/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02 Get All Data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5500/data",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "data"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 Get One Valid Record",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5500/data/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "data",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04 Get Invalid Record",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5500/data/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "data",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05 Search by Keyword",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5500/search?keyword=Golden",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "search"
+          ],
+          "query": [
+            {
+              "key": "keyword",
+              "value": "Golden"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "06 Filter by Category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5500/filter?category=Chinese",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "filter"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "Chinese"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "07 Table View",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5500/table",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "table"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "08 Add Form Page",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5500/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "09 Add New Restaurant - Valid POST",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Test Restaurant",
+              "type": "text",
+              "uuid": "0edfb715-91b4-4c0b-b465-c1535e531971"
+            },
+            {
+              "key": "couisine",
+              "value": "Italian",
+              "type": "text",
+              "uuid": "feb418f4-6928-44f0-8f50-bf76607c55af"
+            },
+            {
+              "key": "city",
+              "value": "Toronto",
+              "type": "text",
+              "uuid": "028324f6-6cc5-4c61-8eea-d7789477e2e4"
+            },
+            {
+              "key": "rating",
+              "value": "4.5",
+              "type": "text",
+              "uuid": "c2dcecbd-9091-41de-a3a2-546041ad0437"
+            },
+            {
+              "key": "priceRange",
+              "value": "$$",
+              "type": "text",
+              "uuid": "c5a60c36-bd66-48bc-aa88-bc6fa9f5900f"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5500/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10 Add New Restaurant - Invalid POST",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "",
+              "type": "text",
+              "uuid": "deb063f0-dfe8-4d28-a3bc-be676525755b"
+            },
+            {
+              "key": "cuisine",
+              "value": "Italian",
+              "type": "text",
+              "uuid": "6dcd4026-d9b0-4385-93a7-4cfddce0c0d2"
+            },
+            {
+              "key": "city",
+              "value": "Toronto",
+              "type": "text",
+              "uuid": "ef7e87db-1460-4669-a89f-ab6aa40b257e"
+            },
+            {
+              "key": "rating",
+              "value": "4.5",
+              "type": "text",
+              "uuid": "3ab7951e-22f3-48b4-a0c1-e20d237ef296"
+            },
+            {
+              "key": "priceRange",
+              "value": "$$",
+              "type": "text",
+              "uuid": "c94a9ed7-940c-48eb-9474-ddf4fa3b9cf3"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5500/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11 Wrong Route Test",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5500/wrongRoute",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "wrongRoute"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

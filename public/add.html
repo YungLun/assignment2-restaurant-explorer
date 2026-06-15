@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Restaurant</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Add a New Restaurant</h1>
+
+  <form action="/add" method="POST">
+    <label>Restaurant Name:</label>
+    <input type="text" name="name">
+
+    <label>Cuisine:</label>
+    <input type="text" name="cuisine">
+
+    <label>City:</label>
+    <input type="text" name="city">
+
+    <label>Rating:</label>
+    <input type="number" name="rating" step="0.1">
+
+    <label>Price Range:</label>
+    <input type="text" name="priceRange" placeholder="$, $$, $$$">
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= pageTitle %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1><%= pageTitle %></h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Restaurant Name</th>
+        <th>Cuisine</th>
+        <th>City</th>
+        <th>Rating</th>
+        <th>Price Range</th>
+        <th>Image</th>
+        <th>JSON Detail</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% restaurants.forEach((restaurant) => { %>
+        <tr>
+          <td><%= restaurant.id %></td>
+          <td><%= restaurant.name %></td>
+          <td><%= restaurant.cuisine %></td>
+          <td><%= restaurant.city %></td>
+          <td><%= restaurant.rating %></td>
+          <td><%= restaurant.priceRange %></td>
+          <td>
+            <img src="<%= restaurant.imageUrl %>" alt="<%= restaurant.imageAlt %>" width="80">
+          </td>
+          <td>
+            <a href="/data/<%= restaurant.id %>">View JSON</a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
