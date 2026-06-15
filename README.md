@@ -174,8 +174,10 @@ It provides examples of how each API endpoint should be called and what response
 
 ## Deployment
 
-Deployment was prepared and tested locally. The application runs successfully using:
+The application was successfully deployed on Vercel.
 
-npm install
+Vercel Link:
+https://assignment2-restaurant-explorer.vercel.app
 
-node server.js
+GitHub Link:
+https://github.com/YungLun/assignment2-restaurant-explorer
